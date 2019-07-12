@@ -27,6 +27,19 @@ Open this file and change this: ```<YOUR_API_KEY>```, by your key you have creat
 
 Move ```HTMLGMaps``` to ```C:/```
 
+This is the secret for you to search on Google Maps using Java:
+
+        DOMDocument doc = browser.getDocument();
+
+        DOMElement address_element = doc.findElement(By.id("address"));
+        DOMElement search_element = doc.findElement(By.id("submit"));
+        DOMElement button = (DOMElement) search_element;
+
+        DOMInputElement address = (DOMInputElement) address_element;
+        address.setValue(jTextField1.getText());
+
+        button.click();
+
 ## Built With
 
 * [Google Maps](https://developers.google.com/maps/documentation/javascript/examples/map-simple?hl=pt-br) - API Javascript
